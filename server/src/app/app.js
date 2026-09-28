@@ -7,7 +7,7 @@ import cors from "cors";
 const app = express();
 
 app.use(cors({
-    origin: "http://localhost:5500",
+    origin: "https://crud-auth-8uhs.vercel.app",
     credentials: true
 }));
 app.use(cookieParser());
