@@ -11,7 +11,7 @@ if (registerForm) {
 
         try {
             const response = await fetch(
-                "http://localhost:3000/api/auth/register",
+                "https://crud-auth-flame.vercel.app/api/auth/register",
                 {
                     method: "POST",
                     headers: {
@@ -57,7 +57,7 @@ if (loginForm) {
 
         try {
             const response = await fetch(
-                "http://localhost:3000/api/auth/login",
+                "https://crud-auth-flame.vercel.app/api/auth/login",
                 {
                     method: "POST",
                     headers: {
@@ -105,7 +105,7 @@ const token = await getAccessToken();
 
     try {
         const response = await fetch(
-            "http://localhost:3000/api/products",
+            "https://crud-auth-flame.vercel.app/api/products",
             {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -178,7 +178,7 @@ if (productForm) {
         try {
 
             const response = await fetch(
-                "http://localhost:3000/api/products",
+                "https://crud-auth-flame.vercel.app/api/products",
                 {
                     method: "POST",
 
@@ -224,7 +224,7 @@ async function deleteProduct(id) {
     try {
 
         const response = await fetch(
-            `http://localhost:3000/api/products/${id}`,
+            `https://crud-auth-flame.vercel.app/api/products/${id}`,
             {
                 method: "DELETE",
                 headers: {
@@ -265,7 +265,7 @@ async function editProduct(id) {
     try {
 
         const response = await fetch(
-            `http://localhost:3000/api/products/${id}`,
+            `https://crud-auth-flame.vercel.app/api/products/${id}`,
             {
                 method: "PUT",
                 headers: {
@@ -307,7 +307,7 @@ if (logoutBtn) {
         try {
 
             const response = await fetch(
-                "http://localhost:3000/api/auth/logout",
+                "https://crud-auth-flame.vercel.app/api/auth/logout",
                 {
                     method: "POST",
                     credentials: "include"
@@ -337,7 +337,7 @@ if (logoutBtn) {
 async function refreshAccessToken() {
 
     const response = await fetch(
-        "http://localhost:3000/api/auth/refresh",
+        "https://crud-auth-flame.vercel.app/api/auth/refresh",
         {
             method: "POST",
             credentials: "include"
